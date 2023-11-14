@@ -31,6 +31,12 @@ void Quick_sort(int a[], int l, int r) {
 				a[j] = a[i];
 				--j;
 			}
+			while (i < j && x < a[j])
+				j--;
+			if (i < j) {
+				a[i] = a[j];
+				++i;
+			}
 		}
 		a[i] = x;
 		Quick_sort(a, l, i - 1);
